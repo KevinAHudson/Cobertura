@@ -103,7 +103,7 @@
         "id": "cobertura.line.uncovered",
         "description": "Decoration color for uncovered lines",
         "defaults": {
-          "dark": "#d01414bf",
+          "dark": "#f117",
           "light": "#ff2727",
           "highContrast": "#FF7F27FF"
         }
@@ -112,7 +112,7 @@
         "id": "cobertura.line.covered",
         "description": "Decoration color for covered lines",
         "defaults": {
-          "dark": "#39fb6685",
+          "dark": "#0f04",
           "light": "#3ed34d99",
           "highContrast": "#27ff64"
         }

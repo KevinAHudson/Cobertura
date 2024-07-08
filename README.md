@@ -4,9 +4,15 @@ Code Coverage Visualizer is a dynamic Visual Studio Code extension that enhances
 
 ## Features
 
-- **Real-Time Coverage Visualization:** Instantly see which lines of code are covered by tests and which are not, right in your editor with highlighted decorations and problem statements.
+![example screenshot](./images/cobertura-usage.png)
+
+- **Quick Access** Easily toggle coverage information from the status bar.
+
+- **Highlighted Line Coverage:** Instantly see which lines of code are covered by tests and which are not, right in your editor.
 
 - **Configurable Coverage Thresholds:** Set custom thresholds for coverage warnings and errors, making it easy to maintain high standards for test coverage.
+
+- **Line Counts** the lines covered and total lines are displayed in the status bar.
 
 - **Minimal Performance Impact:** Optimized to have a low impact on system resources, ensuring that it integrates smoothly into your development workflow without affecting performance.
 
