@@ -30,7 +30,7 @@ Here’s how to get started with Code Coverage Visualizer:
 
 ## Contributions and Feedback
 
-If you have suggestions, encounter any issues, or want to contribute to the development of Code Coverage Visualizer, visit [GitHub repository](https://github.com/KevinAHudson/hackedCCoverage) to submit issues or pull requests.
+If you have suggestions, encounter any issues, or want to contribute to the development of Code Coverage Visualizer, visit [GitHub repository](github.com/KevinAHudson/Cobertura) to submit issues or pull requests.
 
 ## License
 
