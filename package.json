@@ -1,0 +1,175 @@
+{
+  "name": "cobertura",
+  "displayName": "Cobertura: Visuvsalized Code Coverage",
+  "description": "Enhance your testing process with this comprehensive code coverage analysis tool, designed to improve test coverage and ensure software reliability.",
+  "version": "1.0.0",
+  "publisher": "SonsOfHud",
+  "icon": "images/icon.png",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.66.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinAHudson/hackedCCoverage/tree/master"
+  },
+  "categories": [
+    "Testing"
+  ],
+  "keywords": [
+    "analysis",
+    "code coverage",
+    "quality assurance",
+    "lcov",
+    "productivity",
+    "test coverage",
+    "unit test"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/lcov*.info",
+    "onLanguage:clojure",
+    "onLanguage:coffeescript",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:csharp",
+    "onLanguage:dart",
+    "onLanguage:fsharp",
+    "onLanguage:go",
+    "onLanguage:elixir",
+    "onLanguage:haxe",
+    "onLanguage:java",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:objective-c",
+    "onLanguage:objective-cpp",
+    "onLanguage:perl",
+    "onLanguage:perl6",
+    "onLanguage:php",
+    "onLanguage:python",
+    "onLanguage:ruby",
+    "onLanguage:rust",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:shellscript",
+    "onLanguage:vb"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Code coverage",
+      "properties": {
+        "cobertura.searchCriteria": {
+          "type": "string",
+          "default": "coverage/lcov*.info",
+          "description": "Search location for lcov files"
+        },
+        "cobertura.threshold.error": {
+          "type": "number",
+          "default": 50,
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The coverage percentage below which an error is reported"
+        },
+        "cobertura.threshold.warning": {
+          "type": "number",
+          "default": 75,
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The coverage percentage below which a warning is reported"
+        },
+        "cobertura.enableOnStartup": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable code coverage on startup"
+        }
+      }
+    },
+    "activationEvents": [
+      "onCommand:cobertura.hide",
+      "onCommand:cobertura.show"
+    ],
+    "commands": [
+      {
+        "command": "cobertura.hide",
+        "title": "Hide Code Coverage"
+      },
+      {
+        "command": "cobertura.show",
+        "title": "Show Code Coverage"
+      }
+    ],
+    "colors": [
+      {
+        "id": "cobertura.line.uncovered",
+        "description": "Decoration color for uncovered lines",
+        "defaults": {
+          "dark": "#d01414bf",
+          "light": "#ff2727",
+          "highContrast": "#FF7F27FF"
+        }
+      },
+      {
+        "id": "cobertura.line.covered",
+        "description": "Decoration color for covered lines",
+        "defaults": {
+          "dark": "#39fb6685",
+          "light": "#3ed34d99",
+          "highContrast": "#27ff64"
+        }
+      },
+      {
+        "id": "cobertura.insufficientCoverageForeground",
+        "description": "Decoration color for files with insufficient coverage",
+        "defaults": {
+          "light": "#07ad47",
+          "dark": "#40c739",
+          "highContrast": "#47c739"
+        }
+      }
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "camelcase": 2,
+      "no-undef": 0,
+      "no-unused-vars": 0
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -p ./",
+    "compile:watch": "tsc -watch -p ./",
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "@types/node": "^20.5.0",
+    "@types/vscode": "^1.66.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.2",
+    "typescript": "^5.1.6"
+  }
+}
